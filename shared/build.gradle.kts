@@ -41,8 +41,9 @@ kotlin {
 
 android {
     namespace = "com.petros.efthymiou.dailypulse"
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
+        targetSdk = 35
         minSdk = 24
     }
 }
