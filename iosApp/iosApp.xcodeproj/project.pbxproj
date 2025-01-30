@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
-		1960A328DCB31330F7BC729D /* AboutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960A6457904BE1AB2CCF093 /* AboutListView.swift */; };
-		1960A878479DE9BD679804DE /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960AAC198686B53E67E949E /* AboutScreen.swift */; };
+		1960A9AA6BEDAC97C34C3443 /* AboutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960A12E6D98984FEDBC849C /* AboutListView.swift */; };
+		1960AA6C4B83AD465B16BDD3 /* ArticlesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960AA3C186FD7F6E23BF0B5 /* ArticlesScreen.swift */; };
+		1960AB7BD80F12314A2A4209 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1960AF0A522F63DB0175643B /* AboutScreen.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -31,8 +32,9 @@
 /* Begin PBXFileReference section */
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1960A6457904BE1AB2CCF093 /* AboutListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutListView.swift; sourceTree = "<group>"; };
-		1960AAC198686B53E67E949E /* AboutScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		1960A12E6D98984FEDBC849C /* AboutListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutListView.swift; sourceTree = "<group>"; };
+		1960AA3C186FD7F6E23BF0B5 /* ArticlesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesScreen.swift; sourceTree = "<group>"; };
+		1960AF0A522F63DB0175643B /* AboutScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,16 @@
 				058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1960A955DAAFBF1CEE57BFA5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1960AF0A522F63DB0175643B /* AboutScreen.swift */,
+				1960A12E6D98984FEDBC849C /* AboutListView.swift */,
+				1960AA3C186FD7F6E23BF0B5 /* ArticlesScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		7555FF72242A565900829871 = {
@@ -83,8 +95,7 @@
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
-				1960A6457904BE1AB2CCF093 /* AboutListView.swift */,
-				1960AAC198686B53E67E949E /* AboutScreen.swift */,
+				1960A955DAAFBF1CEE57BFA5 /* Screens */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -190,8 +201,9 @@
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
-				1960A328DCB31330F7BC729D /* AboutListView.swift in Sources */,
-				1960A878479DE9BD679804DE /* AboutScreen.swift in Sources */,
+				1960AB7BD80F12314A2A4209 /* AboutScreen.swift in Sources */,
+				1960A9AA6BEDAC97C34C3443 /* AboutListView.swift in Sources */,
+				1960AA6C4B83AD465B16BDD3 /* ArticlesScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
