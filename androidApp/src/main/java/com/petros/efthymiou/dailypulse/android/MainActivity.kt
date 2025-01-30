@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ArticlesScreen(articlesViewModel = articlesViewModel, onAboutButtonClick = { Log.d("Daily Pulse", "About button clicked") })
+                    AppScaffold(articlesViewModel = articlesViewModel)
                 }
             }
         }
@@ -37,6 +37,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     MyApplicationTheme {
-        AboutScreen()
+        AppScaffold(ArticlesViewModel())
     }
 }

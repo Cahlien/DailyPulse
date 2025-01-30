@@ -5,23 +5,39 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.petros.efthymiou.dailypulse.Platform
 
 @Composable
-fun AboutScreen() {
+fun AboutScreen(
+    onUpButtonClick: () -> Unit
+) {
     Column {
-        Toolbar()
+        Toolbar(onUpButtonClick)
         ContentView()
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun Toolbar() {
-    TopAppBar(title = { Text(text = "About Device") },)
+private fun Toolbar(
+    onUpButtonClick: () -> Unit,
+    ) {
+    TopAppBar(
+        title = { Text(text = "About Device") },
+        navigationIcon = {
+            IconButton(onClick = onUpButtonClick) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = "Up Button",
+                )
+            }
+        }
+        )
 }
 
 @Composable
