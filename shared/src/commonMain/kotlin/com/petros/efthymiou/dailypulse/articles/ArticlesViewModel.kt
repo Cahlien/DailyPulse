@@ -11,10 +11,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 
-class ArticlesViewModel: BaseViewModel() {
+class ArticlesViewModel(private val useCase: ArticlesUseCase): BaseViewModel() {
     private val _articlesState: MutableStateFlow<ArticlesState> = MutableStateFlow(ArticlesState(loading = true))
     val articlesState: StateFlow<ArticlesState> = _articlesState
-    private val useCase: ArticlesUseCase
 
     init {
         val client = HttpClient {
@@ -29,7 +28,6 @@ class ArticlesViewModel: BaseViewModel() {
 
         val service = ArticlesService(client)
 
-        useCase = ArticlesUseCase(service)
         getArticles()
     }
 
