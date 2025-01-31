@@ -2,11 +2,12 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.skiePlugin)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
+    kotlin.applyDefaultHierarchyTemplate()
 
     androidTarget {
         compilations.all {
@@ -31,19 +32,26 @@ kotlin {
             dependencies {
                 //put your multiplatform dependencies here
                 implementation(libs.kotlinx.coroutines.core)
+                implementation(libs.kotlinx.datetime)
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.content.negotiation)
+                implementation(libs.ktor.serialization.kotlinx.json)
+                implementation(libs.kotlinx.serialization.json)
+
             }
         }
 
         val androidMain by getting {
             dependencies {
                 implementation(libs.androidx.lifecycle.viewmodel)
+                implementation(libs.ktor.client.android)
             }
 
         }
 
         val iosMain by getting {
             dependencies {
-
+                implementation(libs.ktor.client.darwin)
             }
         }
 
@@ -59,7 +67,7 @@ android {
     namespace = "com.petros.efthymiou.dailypulse"
     compileSdk = 35
     defaultConfig {
-        targetSdk = 35
         minSdk = 24
     }
+
 }
