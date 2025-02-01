@@ -31,7 +31,7 @@ class ArticlesViewModel(private val useCase: ArticlesUseCase): BaseViewModel() {
         getArticles()
     }
 
-    private fun getArticles(forceFetch: Boolean = false) {
+    fun getArticles(forceFetch: Boolean = false) {
         scope.launch {
             scope.launch {
                 val fetchedArticles = useCase.getArticles(forceFetch)

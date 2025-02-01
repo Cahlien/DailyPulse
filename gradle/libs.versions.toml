@@ -1,5 +1,5 @@
 [versions]
-agp = "8.2.0"
+agp = "8.7.0"
 kotlin = "1.9.25"
 compose = "1.7.6"
 compose-compiler = "1.5.15"
@@ -14,7 +14,7 @@ ktorClient = "2.3.8"
 kotlinxDatetime = "0.6.1"
 kotlinxSerialization = "1.6.0"
 koin = "3.5.6"
-sqlDelight = "2.0.1"
+sqlDelight = "2.0.2"
 accompanistSwiperefresh = "0.36.0"
 
 [libraries]
