@@ -34,6 +34,8 @@ import coil.compose.AsyncImage
 import com.petros.efthymiou.dailypulse.articles.Article
 import com.petros.efthymiou.dailypulse.articles.ArticlesViewModel
 import org.koin.androidx.compose.koinViewModel
+import com.google.accompanist.swiperefresh.SwipeRefresh
+import com.google.accompanist.swiperefresh.SwipeRefreshState
 
 @Composable
 fun ArticlesScreen(
@@ -54,7 +56,7 @@ fun ArticlesScreen(
         }
 
         if(articlesState.value.articles.isNotEmpty()) {
-            ArticlesListView(articlesViewModel.articlesState.value.articles)
+            ArticlesListView(articlesViewModel)
         }
     }
 }
@@ -78,13 +80,15 @@ fun AppBar(onAboutButtonClick: () -> Unit) {
 }
 
 @Composable
-fun ArticlesListView(articles: List<Article>) {
-    LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
+fun ArticlesListView(viewModel: ArticlesViewModel) {
+    SwipeRefresh(
+        state = SwipeRefreshState(viewModel.articlesState.value.loading),
+        onRefresh = { viewModel.getArticles(true) }
     ) {
-        items(articles) { article ->
-            ArticleItemView(article)
+        LazyColumn {
+            items(viewModel.articlesState.value.articles) { article ->
+                ArticleItemView(article)
+            }
         }
     }
 }

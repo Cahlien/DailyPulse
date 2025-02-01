@@ -31,14 +31,12 @@ class ArticlesViewModel(private val useCase: ArticlesUseCase): BaseViewModel() {
         getArticles()
     }
 
-    private fun getArticles() {
+    private fun getArticles(forceFetch: Boolean = false) {
         scope.launch {
             scope.launch {
-                val fetchedArticles = useCase.getArticles()
+                val fetchedArticles = useCase.getArticles(forceFetch)
 
-                                _articlesState.value = ArticlesState(
-                    articles = fetchedArticles,
-                )
+                _articlesState.emit(ArticlesState(articles = fetchedArticles))
             }
         }
     }
