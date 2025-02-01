@@ -1,6 +1,9 @@
-package com.petros.efthymiou.dailypulse.articles
+package com.petros.efthymiou.dailypulse.articles.presentation
 
 import com.petros.efthymiou.dailypulse.BaseViewModel
+import com.petros.efthymiou.dailypulse.articles.data.ArticlesService
+import com.petros.efthymiou.dailypulse.articles.presentation.ArticlesState
+import com.petros.efthymiou.dailypulse.articles.application.ArticlesUseCase
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.serialization.kotlinx.json.json

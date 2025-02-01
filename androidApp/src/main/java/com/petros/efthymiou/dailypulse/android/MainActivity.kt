@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.petros.efthymiou.dailypulse.Platform
 import com.petros.efthymiou.dailypulse.android.screens.AboutScreen
 import com.petros.efthymiou.dailypulse.android.screens.ArticlesScreen
-import com.petros.efthymiou.dailypulse.articles.ArticlesViewModel
+import com.petros.efthymiou.dailypulse.articles.presentation.ArticlesViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
