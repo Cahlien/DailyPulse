@@ -10,7 +10,7 @@ extension ArticlesScreen {
 
         init() {
             articlesViewModel = ArticlesInjector().articlesViewModel
-            articlesState = articlesViewModel.articlesState.value as! ArticlesState
+            articlesState = articlesViewModel.articlesState.value
         }
 
         @Published

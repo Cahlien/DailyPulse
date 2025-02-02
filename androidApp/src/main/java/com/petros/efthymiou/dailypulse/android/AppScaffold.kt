@@ -13,7 +13,7 @@ import androidx.navigation.compose.rememberNavController
 import com.petros.efthymiou.dailypulse.android.screens.AboutScreen
 import com.petros.efthymiou.dailypulse.android.screens.ArticlesScreen
 import com.petros.efthymiou.dailypulse.android.screens.Screens
-import com.petros.efthymiou.dailypulse.articles.presentation.ArticlesViewModel
+import com.petros.efthymiou.dailypulse.android.screens.SourcesScreen
 
 @Composable
 fun AppScaffold() {
@@ -40,7 +40,16 @@ fun AppNavHost(
         modifier = modifier
     ) {
         composable(Screens.ARTICLES.route) {
-            ArticlesScreen(onAboutButtonClick = { navController.navigate(Screens.ABOUT_DEVICE.route) })
+            ArticlesScreen(onAboutButtonClick = { navController.navigate(Screens.ABOUT_DEVICE.route) },
+                onSourceButtonClick = { navController.navigate(Screens.SOURCES.route) }
+            )
+        }
+
+        composable(Screens.SOURCES.route) {
+            SourcesScreen(
+                onUpButtonClick = {
+                    navController.navigate(Screens.SOURCES.route)
+                })
         }
 
         composable(Screens.ABOUT_DEVICE.route) {
